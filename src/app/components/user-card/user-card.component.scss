@@ -1,0 +1,88 @@
+$green: #1ecd97;
+$gray: #bbbbbb;
+
+.user-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid lighten($green, 45%);
+  width: 300px;
+  padding: 2rem 0.5rem;
+  border-radius: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: lighten($green, 45%);
+    top: 0;
+    height: 30%;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .user-card-picture {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 2px solid $green;
+    overflow: hidden;
+    z-index: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .user-card-name {
+    margin: 0.7rem 0 0.2rem 0;
+    font-size: 1.2rem;
+    color: $green;
+    font-weight: 500;
+  }
+
+  .user-card-location {
+    display: flex;
+    color: darken($gray, 15%);
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+
+    fa-icon {
+      margin-right: 0.3rem;
+    }
+  }
+
+  .user-card-info {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.9rem;
+    width: 200px;
+    font-weight: 500;
+    color: darken($gray, 15%);
+    margin-bottom: 1rem;
+
+    .birthdayIcon {
+      color: lightpink;
+    }
+
+    .phoneIcon {
+      color: lightskyblue;
+    }
+
+    fa-icon {
+      margin-right: 0.3rem;
+    }
+  }
+
+  .user-card-email {
+    display: flex;
+    font-size: 0.9rem;
+    color: darken($gray, 15%);
+
+    fa-icon {
+      margin-right: 0.5rem;
+      color: lightseagreen;
+    }
+  }
+}

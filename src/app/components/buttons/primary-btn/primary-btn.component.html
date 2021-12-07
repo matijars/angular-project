@@ -1,0 +1,4 @@
+<button class="primary-btn">
+  <img *ngIf="loader" class="btn-loader" src="../../../assets/tail-spin.svg" />
+  <fa-icon *ngIf="!loader" [icon]="buttonIcon"></fa-icon>{{ buttonTitle }}
+</button>

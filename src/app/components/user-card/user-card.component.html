@@ -1,0 +1,26 @@
+<div class="user-card">
+  <div class="user-card-picture">
+    <img src="{{ user.picture.large }}" alt="" />
+  </div>
+  <span class="user-card-name"
+    >{{ user.name.first }} {{ user.name.last }}
+  </span>
+  <div class="user-card-location">
+    <fa-icon [icon]="locationIcon"></fa-icon>
+    <span>{{ user.nat }}, {{ user.location.city }}</span>
+  </div>
+  <div class="user-card-info">
+    <div>
+      <fa-icon class="birthdayIcon" [icon]="birthdayIcon"></fa-icon>
+      <span>{{ user.dob.age }}</span>
+    </div>
+    <div>
+      <fa-icon class="phoneIcon" [icon]="phoneIcon"></fa-icon>
+      <span>{{ user.cell }}</span>
+    </div>
+  </div>
+  <div class="user-card-email">
+    <fa-icon class="emailIcon" [icon]="emailIcon"></fa-icon>
+    <span>{{ user.email }}</span>
+  </div>
+</div>
