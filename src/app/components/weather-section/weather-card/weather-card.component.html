@@ -1,0 +1,99 @@
+<div
+  class="weather-card"
+  [ngClass]="{
+    london: weather.name == 'London',
+    barcelona: weather.name == 'Barcelona',
+    moscow: weather.name == 'Moscow',
+    rome: weather.name == 'Rome',
+    athens: weather.name == 'Athens',
+    newyork: weather.name == 'New York',
+    tokyo: weather.name == 'Tokyo',
+    belgrade: weather.name == 'Belgrade'
+  }"
+>
+  <span class="weather-card-name">{{ weather.name }} </span>
+  <span class="weather-card-id" hidden>{{ weather.id }}</span>
+  <div class="weather-card-info">
+    <span class="weather-card-temp">{{ weather.main.temp.toFixed() }}°C</span>
+    <img
+      src="https://openweathermap.org/img/w/{{ weather.weather[0].icon }}.png"
+      alt="Weather Icon"
+    />
+  </div>
+  <span class="weather-card-wind"
+    >Wind Speed: {{ ((weather.wind.speed * (60 * 60)) / 1000).toFixed(0) }} km/h
+  </span>
+
+  <button
+    class="weather-card-forecast-btn"
+    (click)="getForecast($event.target)"
+    data-id="{{ weather.id }}"
+  ></button>
+
+  <div class="weather-card-forecast" *ngIf="showWeatherForecast == weather.id">
+    <h5>Forecast</h5>
+
+    <div class="forecast-bottom">
+      <div class="forecast-holder">
+        <div class="forecast-hours" *ngFor="let time of hours">
+          <span>{{ time }}</span>
+        </div>
+      </div>
+      <div class="forecast-holder">
+        <div class="forecast-hours" *ngFor="let temp of hoursTemp">
+          <span>{{ temp }}°C</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div
+  class="city"
+  *ngFor="let city of data"
+  [ngClass]="{
+    london: city.name == 'London',
+    barcelona: city.name == 'Barcelona',
+    moscow: city.name == 'Moscow',
+    rome: city.name == 'Rome',
+    athens: city.name == 'Athens'
+  }"
+>
+  <span class="city__id" hidden>{{ city.id }}</span>
+  <span class="city__name">{{ city.name }}</span>
+  <div class="city__item">
+    <span class="city__temp">{{ city.main.temp.toFixed() }}°C</span>
+    <img
+      src="https://openweathermap.org/img/w/{{ city.weather[0].icon }}.png"
+      alt=""
+    />
+  </div>
+
+  <span class="city__wind"
+    >Wind Speed:
+    {{ ((city.wind.speed * (60 * 60)) / 1000).toFixed(0) }} km/h</span
+  >
+
+  <button
+    class="city__forecast__btn"
+    (click)="getForecast($event.target)"
+    attr.data-city-id="{{ city.id }}"
+  ></button>
+
+  <div class="forecast" *ngIf="showCityForecast == city.id">
+    <h5>Forecast</h5>
+
+    <div class="forecast__bottom">
+      <div class="forecast__holder">
+        <div class="forecast__hours" *ngFor="let time of hours">
+          <span>{{ time }}</span>
+        </div>
+      </div>
+      <div class="forecast__holder">
+        <div class="forecast__hours" *ngFor="let temp of hoursTemp">
+          <span>{{ temp }}°C</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

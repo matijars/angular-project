@@ -1,0 +1,147 @@
+@import "../../../../styles/main.scss";
+
+.weather-card {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid $blue;
+  border-radius: 1rem;
+  overflow: hidden;
+  min-width: 250px;
+  color: $white;
+
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  span {
+    margin: 0.7rem 0.5rem;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  .weather-card-info {
+    display: flex;
+    align-items: center;
+    z-index: 5;
+  }
+
+  .weather-card-name {
+    font-family: "Fredoka One", cursive;
+    font-size: 2rem;
+    z-index: 2;
+  }
+
+  .weather-card-temp {
+    font-size: 1.5em;
+    font-weight: 900;
+    z-index: 2;
+  }
+
+  .weather-card-wind {
+    font-weight: 600;
+    z-index: 2;
+  }
+
+  .weather-card-forecast-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+  }
+}
+
+.weather-card-forecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+  transition: 1s ease-in-out;
+
+  h5 {
+    margin-bottom: 1rem;
+    color: lightblue;
+    font-size: 1rem;
+    border-top: 1px solid white;
+    padding-top: 0.7rem;
+  }
+
+  span {
+    margin: 0.5rem;
+    font-size: 1em;
+  }
+
+  .forecast-holder {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 1rem 0;
+    font-weight: 500;
+  }
+}
+
+// Weather Background
+
+.london {
+  background: url("../../../../assets/images/weather/london.jpg");
+}
+
+.moscow {
+  background: url("../../../../assets/images/weather/moscow.jpg");
+}
+
+.barcelona {
+  background: url("../../../../assets/images/weather/barcelona.jpg");
+}
+
+.rome {
+  background: url("../../../../assets/images/weather/rome.jpg");
+}
+
+.athens {
+  background: url("../../../../assets/images/weather/athens.jpg");
+}
+
+.newyork {
+  background: url("../../../../assets/images/weather/new-york.jpg");
+}
+
+.tokyo {
+  background: url("../../../../assets/images/weather/tokyo.jpg");
+}
+
+.belgrade {
+  background: url("../../../../assets/images/weather/belgrade.jpg");
+}
+
+.london,
+.moscow,
+.barcelona,
+.rome,
+.athens,
+.newyork,
+.tokyo,
+.belgrade {
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,12 +1,11 @@
-$green: #1ecd97;
-$gray: #bbbbbb;
+@import "../../../../styles/main.scss";
 
 .user-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 2px solid lighten($green, 45%);
+  border-bottom: 2px solid lighten($green, 35%);
   width: 300px;
   padding: 2rem 0.5rem;
   border-radius: 1rem;
@@ -63,11 +62,11 @@ $gray: #bbbbbb;
     margin-bottom: 1rem;
 
     .birthdayIcon {
-      color: lightpink;
+      color: $lightpink;
     }
 
     .phoneIcon {
-      color: lightskyblue;
+      color: $lightblue;
     }
 
     fa-icon {
@@ -82,7 +81,7 @@ $gray: #bbbbbb;
 
     fa-icon {
       margin-right: 0.5rem;
-      color: lightseagreen;
+      color: $darkgreen;
     }
   }
 }

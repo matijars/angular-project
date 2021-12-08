@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from 'src/app/services/users.service';
+import { UsersService } from 'src/app/services/users/users.service';
 
 import { UserList } from 'src/app/interface/user';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
@@ -24,9 +24,9 @@ export class UserListComponent implements OnInit {
     this.loader = true;
 
     this.userService.getUsers().subscribe((res) => {
-      console.log(res);
       this.loader = false;
       this.userList = res.results;
+      console.log(this.userList);
     });
   }
 }

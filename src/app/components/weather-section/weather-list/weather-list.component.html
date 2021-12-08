@@ -1,0 +1,9 @@
+<div class="section">
+  <h1 class="section-title">Weather</h1>
+  <div class="weather-list">
+    <app-weather-card
+      *ngFor="let weather of weatherList"
+      [weather]="weather"
+    ></app-weather-card>
+  </div>
+</div>
