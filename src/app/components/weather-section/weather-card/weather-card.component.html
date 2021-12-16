@@ -34,13 +34,18 @@
     <h5>Forecast</h5>
 
     <div class="forecast-bottom">
+      <img
+        *ngIf="loader"
+        class="forecast-loader"
+        src="../../../../assets/loaders/spinning-circles.svg"
+      />
       <div class="forecast-holder">
         <div class="forecast-hours" *ngFor="let time of hours">
           <span>{{ time }}</span>
         </div>
       </div>
       <div class="forecast-holder">
-        <div class="forecast-hours" *ngFor="let temp of hoursTemp">
+        <div class="forecast-temp" *ngFor="let temp of hoursTemp">
           <span>{{ temp }}°C</span>
         </div>
       </div>

@@ -20,7 +20,6 @@ export class WeatherListComponent implements OnInit {
   getWeather() {
     this.weatherService.getWeather().subscribe((res) => {
       this.weatherList = res.list;
-      console.log(this.weatherList);
     });
   }
 }

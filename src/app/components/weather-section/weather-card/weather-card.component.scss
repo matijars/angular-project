@@ -71,6 +71,7 @@
 }
 
 .weather-card-forecast {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -80,23 +81,56 @@
   transition: 1s ease-in-out;
 
   h5 {
-    margin-bottom: 1rem;
-    color: lightblue;
+    margin-bottom: 0.8rem;
+    color: $lightblue;
     font-size: 1rem;
-    border-top: 1px solid white;
+    border-top: 1px solid $white;
     padding-top: 0.7rem;
   }
 
-  span {
-    margin: 0.5rem;
-    font-size: 1em;
-  }
+  .forecast-bottom {
+    position: relative;
 
-  .forecast-holder {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 0 1rem 0;
-    font-weight: 500;
+    .forecast-holder {
+      display: flex;
+      width: 15rem;
+      height: 1.6rem;
+      justify-content: space-evenly;
+      font-weight: 500;
+
+      .forecast-hours,
+      .forecast-temp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+      }
+
+      .forecast-hours {
+        position: relative;
+        font-size: 0.92rem;
+
+        &::after {
+          content: "h";
+          position: absolute;
+          font-size: 8px;
+          color: $white;
+          right: -8px;
+          top: 5px;
+        }
+      }
+
+      .forecast-temp {
+        font-size: 0.9rem;
+      }
+    }
+
+    .forecast-loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
   }
 }
 

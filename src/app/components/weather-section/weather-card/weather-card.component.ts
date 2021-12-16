@@ -8,8 +8,10 @@ import { WeatherService } from 'src/app/services/weather/weather.service';
 })
 export class WeatherCardComponent implements OnInit {
   @Input() weather: any;
-  hours = [];
-  hoursTemp = [];
+
+  loader!: boolean;
+  hours = Array();
+  hoursTemp = Array();
   showWeatherForecast!: string;
 
   constructor(private weatherService: WeatherService) {}
@@ -17,14 +19,26 @@ export class WeatherCardComponent implements OnInit {
   ngOnInit(): void {}
 
   getForecast(eventTarget: any) {
+    this.loader = true;
     const weatherId = eventTarget.id;
-
-    this.showWeatherForecast = weatherId;
     this.hours = [];
     this.hoursTemp = [];
 
+    this.showWeatherForecast = weatherId;
+
     this.weatherService.getForecast(weatherId).subscribe((res) => {
-      console.log(res);
+      this.loader = false;
+      let hours = res.list.slice(0, 4);
+
+      hours.map((hour: any) => {
+        let fullTime = hour.dt_txt;
+        let fullHour = fullTime.substring(11);
+        let time = fullHour.substring(0, fullHour.length - 3);
+        let temp = hour.main.temp;
+
+        this.hours.push(time);
+        this.hoursTemp.push(temp.toFixed());
+      });
     });
   }
 }
