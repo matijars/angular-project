@@ -14,6 +14,8 @@ import { PrimaryBtnComponent } from './components/buttons/primary-btn/primary-bt
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RecipeSearchComponent } from './components/recipe-section/recipe-search/recipe-search.component';
 import { RecipeListComponent } from './components/recipe-section/recipe-list/recipe-list.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { RecipeListComponent } from './components/recipe-section/recipe-list/rec
     WeatherCardComponent,
     RecipeSearchComponent,
     RecipeListComponent,
+    HomeComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
