@@ -17,6 +17,7 @@ import { RecipeListComponent } from './components/recipe-section/recipe-list/rec
 import { HomeComponent } from './components/home/home.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HttpClientModule,
     FontAwesomeModule,
     CarouselModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
