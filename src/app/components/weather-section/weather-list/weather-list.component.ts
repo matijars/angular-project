@@ -18,8 +18,10 @@ export class WeatherListComponent implements OnInit {
   }
 
   getWeather() {
+    this.loader = true;
     this.weatherService.getWeather().subscribe((res) => {
       this.weatherList = res.list;
+      this.loader = false;
     });
   }
 }
