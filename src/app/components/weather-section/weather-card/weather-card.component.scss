@@ -12,10 +12,10 @@
   min-width: 250px;
   color: $white;
 
-  transition: transform 0.2s ease-in-out;
+  transition: $transition;
 
   &:hover {
-    transform: scale(1.03);
+    transform: $transform-scale;
   }
 
   &::after {

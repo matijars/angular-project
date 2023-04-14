@@ -9,6 +9,12 @@
   width: 300px;
   padding: 2rem 0.5rem;
   border-radius: 1rem;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    transform: $transform-scale;
+  }
 
   &::after {
     content: "";
