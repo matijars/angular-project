@@ -16,7 +16,6 @@ import { RecipeSearchComponent } from './components/recipe-section/recipe-search
 import { RecipeListComponent } from './components/recipe-section/recipe-list/recipe-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderComponent } from './components/loader/loader.component';
 
@@ -39,7 +38,6 @@ import { LoaderComponent } from './components/loader/loader.component';
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
-    CarouselModule,
     BrowserAnimationsModule,
   ],
   providers: [],
