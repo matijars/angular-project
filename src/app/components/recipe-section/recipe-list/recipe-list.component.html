@@ -26,4 +26,10 @@
   </div>
 </div>
 
+<img
+  *ngIf="!recipes || !recipes.length"
+  class="recipe-search-icon"
+  src="assets/images/recipes/recipe-search.svg"
+/>
+
 <app-loader *ngIf="loader"></app-loader>

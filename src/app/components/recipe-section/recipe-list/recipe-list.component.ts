@@ -19,5 +19,6 @@ export class RecipeListComponent implements OnInit {
       this.recipes = res.hits;
       this.loader = false;
     });
+    console.log(this.recipes);
   }
 }
