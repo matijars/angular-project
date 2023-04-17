@@ -1,2 +1,8 @@
-<input type="text" placeholder="Search recipes" />
-<button>Search</button>
+<input
+  id="recipeSearch"
+  #recipeSearch
+  type="text"
+  placeholder="Search recipes"
+  (keydown.enter)="updateName(recipeSearch.value)"
+/>
+<button type="button" (click)="updateName(recipeSearch.value)">Search</button>

@@ -1,4 +1,29 @@
 <div class="section">
   <h1 class="section-title">Recipes</h1>
-  <app-recipe-search></app-recipe-search>
+  <app-recipe-search
+    (recipeSearchEvent)="recipeSearch($event)"
+  ></app-recipe-search>
+
+  <div class="recipe-list">
+    <div *ngFor="let recipe of recipes" class="recipe-card">
+      <img
+        class="recipe-image"
+        [src]="recipe.recipe.image"
+        alt="recipe image"
+      />
+      <span class="recipe-name">{{ recipe.recipe.label }}</span>
+      <div class="recipe-bottom">
+        <span class="num"
+          >{{ recipe.recipe.calories | number : "1.2-2" }}
+          <span class="txt">calories</span></span
+        >
+        <span class="num"
+          >{{ recipe.recipe.ingredientLines.length }}
+          <span class="txt">ingredients</span></span
+        >
+      </div>
+    </div>
+  </div>
 </div>
+
+<app-loader *ngIf="loader"></app-loader>

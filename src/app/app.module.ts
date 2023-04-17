@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderComponent } from './components/loader/loader.component';
+import { LoadedDirective } from './helpers/imageloaded.directive';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     HomeComponent,
     NavigationComponent,
     LoaderComponent,
+    LoadedDirective,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     HttpClientModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
