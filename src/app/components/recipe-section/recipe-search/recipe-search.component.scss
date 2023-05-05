@@ -1,39 +1,45 @@
 @import "../../../../styles/main.scss";
 
-input {
-  height: 2.2rem;
-  min-width: 20rem;
-  border: none;
-  border-top-left-radius: 0.8rem;
-  border-bottom-left-radius: 0.8rem;
-  background-color: $lightgray;
-  outline: none;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  font-weight: 900;
-  font-size: 0.9rem;
-  color: rgba($color: $red, $alpha: 0.9);
+:host {
+  display: flex;
+  width: 100%;
+  max-width: 26rem;
 
-  &::placeholder {
-    font-weight: 500;
-    opacity: 0.5;
+  input {
+    height: 2.2rem;
+    width: 100%;
+    border: none;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    background-color: $lightgray;
+    outline: none;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    font-size: 0.9rem;
+    color: rgba($color: $red, $alpha: 0.9);
+
+    &::placeholder {
+      font-weight: 500;
+      opacity: 0.5;
+    }
   }
-}
 
-button {
-  height: 2.2rem;
-  border: none;
-  outline: none;
-  background-color: rgba($color: $red, $alpha: 0.8);
-  border-top-right-radius: 0.8rem;
-  border-bottom-right-radius: 0.8rem;
-  color: $white;
-  padding: 0rem 1rem;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease;
+  button {
+    height: 2.2rem;
+    border: none;
+    outline: none;
+    background-color: rgba($color: $red, $alpha: 0.8);
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    color: $white;
+    padding: 0rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
 
-  &:hover {
-    background-color: $red;
+    &:hover {
+      background-color: $red;
+    }
   }
 }
